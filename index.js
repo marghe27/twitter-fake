@@ -20,6 +20,7 @@ exports.addTwitt = function (paramAuthor, paramDate, paramDescription) {
 	return twitters;
 };
 
+
  
 // deleteTwittById(id) cancella in base all'id passato
 exports.deleteTwittById = function(id){
@@ -69,12 +70,14 @@ exports.searchByAuthor = function (paramAuthor) {
 
 
 
-var twittDesc = [];
-// Search  word in twitters.description (non funziona, trova solo la frase intera)
+
+// SearchContext serve per la funzione successiva
 exports.searchContext = function() {
 	'use strict';
+	var twittDesc = [];
 	for(var item of twitters){
-		twittDesc.push(item.description);
+		//twittDesc.push(item.description);
+		twittDesc.push(item);
 	}
 	
 	return twittDesc;
@@ -84,10 +87,17 @@ exports.searchContext = function() {
 
 var arrayText = this.searchContext();
 
-// ritorna la Posizione del contains(sentence) (frase intera)
+
+// ritorna gli obj che contengono quella parola
 exports.contains = function(sentence) {
 	'use strict';
-	return arrayText.indexOf(sentence);
+	var post = [];
+	for (var item of arrayText){
+		if(item.description.indexOf(sentence)>-1){
+			post.push(item);
+		}
+	}
+	return post;
 
 };
 
