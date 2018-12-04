@@ -1,0 +1,19 @@
+{
+  "name": "fake-twitter",
+  "version": "1.0.0",
+  "description": "Esercizio su creazione di twitts  ",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "twitt",
+    "twitter"
+  ],
+  "author": "Margherita <marghe27@live.it>",
+  "license": "MIT"
+}
