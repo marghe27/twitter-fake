@@ -56,7 +56,7 @@ describe('Tests del file index.js', function(){
 		fakeTwitt.addTwitt("Carla", "04-04-2016","È universalmente riconosciuto che un lettore che osserva il layout di una pagina viene distratto dal contenuto testuale se questo è leggibile.");
 																					
 	 	assert.equal(fakeTwitt.getTwitt()[1].description, "Nel settore della tipografia e della stampa.");
-		//errore di asserzione
+		
 		var boolean = fakeTwitt.contains("utilizzato");
 		assert.equal(boolean, 0);
 	});
