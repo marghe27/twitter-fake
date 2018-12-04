@@ -57,8 +57,8 @@ describe('Tests del file index.js', function(){
 																					
 	 	assert.equal(fakeTwitt.getTwitt()[1].description, "Nel settore della tipografia e della stampa.");
 		//errore di asserzione
-		//var boolean = fakeTwitt.contains("Lorem Ipsum è un testo segnaposto utilizzato.");
-//		assert.equal(boolean, fakeTwitt.getTwitt()[0].description);
+		var boolean = fakeTwitt.contains("utilizzato");
+		assert.equal(boolean, 0);
 	});
 	
 	
